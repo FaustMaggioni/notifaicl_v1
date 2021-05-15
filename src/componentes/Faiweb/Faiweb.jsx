@@ -4,7 +4,7 @@ import { getNoticias } from '../../actions/getNoticias';
 import useStyles from './styles'
 const Faiweb = () => {
     const classes = useStyles()
-    const [noticias, setNoticias] = useState([])
+    const [noticias, setNoticias] = useState(null)
     const source = new EventSource('http://localhost:5000/fai/events');
 
     useEffect(() => {
@@ -18,7 +18,10 @@ const Faiweb = () => {
 
     const getRealtimeData = (data) => {
         console.log('data', data)
-        setNoticias(JSON.parse(data))
+        // let dataParsed = JSON.parse(data)
+        // console.log('Parsed data: ', dataParsed)
+        setNoticias([...data])
+        console.log(noticias)
     }
     const fetchAndSetNoticias = async () => {
         console.log('fetch and set')
@@ -50,14 +53,19 @@ const Faiweb = () => {
 const Listado = ({ noticias, classes }) => {
     return (
         <div>
-            {noticias.map((noticia) => {
+            {noticias.reverse().map((noticia, i) => {
+                let esNuevo = noticia.new
+                let fondo = '#DCDCEF'
+                if (esNuevo) {
+                    fondo = 'yellow'
+                }
                 return (
                     <ListItem >
                         <Card className={classes.listItem}>
-                            <CardContent>
-                                <Typography>{noticia.title}</Typography>
+                            <CardContent >
+                                <Typography>{noticia.title}, {i}</Typography>
                             </CardContent>
-                            <CardActions className={classes.actions}>
+                            <CardActions className={classes.actions} style={{ backgroundColor: fondo }}>
                                 <Button>
                                     <a href={noticia.link} target='_blank'> Ver en faiweb </a>
                                 </Button>

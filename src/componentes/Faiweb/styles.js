@@ -17,9 +17,6 @@ export default makeStyles(() => ({
         borderBlockWidth: '1px',
         borderColor: '#DCDCEF'
     },
-    actions: {
-        backgroundColor: '#DCDCEF'
-    },
     title: {
         fontWeight: 300,
         fontStyle: 'oblique',
