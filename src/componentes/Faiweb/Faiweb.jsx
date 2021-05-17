@@ -13,15 +13,17 @@ const Faiweb = () => {
 
     useEffect(() => {
         console.log('effect')
-        source.onmessage = e => getRealtimeData(e.data)
+        source.onmessage = e => getRealtimeData(e)
     }, [source])
 
     const getRealtimeData = (data) => {
-        console.log('data', data)
-        // let dataParsed = JSON.parse(data)
-        // console.log('Parsed data: ', dataParsed)
-        setNoticias([...data])
-        console.log(noticias)
+        console.log(data)
+        try {
+            setNoticias([...data])
+        }
+        catch (error) {
+            console.log(error)
+        }
     }
     const fetchAndSetNoticias = async () => {
         console.log('fetch and set')
