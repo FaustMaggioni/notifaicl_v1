@@ -9,8 +9,6 @@ export default makeStyles({
         minWidth: '100%',
     },
     toolbar: {
-        alignContent: 'center',
-        alignItems: 'center',
         minWidth: '100%',
         paddingLeft: '0px',
         paddingRight: '0px',
@@ -20,15 +18,15 @@ export default makeStyles({
         fontWeight: 300,
         color: 'black',
         fontStyle: "oblique",
-        padding: '0.2em',
-        margin: '0.2em',
-        fontSize: '5vw',
+        padding: '0em',
+        margin: '0em',
+        fontSize: '4em',
         textAlign: 'justify',
 
     },
     logoNav: {
-        maxHeight: '2em',
-        fontSize: '4vw'
+        maxHeight: '1.5em',
+        fontSize: '3vw'
     },
 
 

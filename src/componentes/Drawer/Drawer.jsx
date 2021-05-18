@@ -14,10 +14,14 @@ const useStyles = makeStyles({
     },
     fullList: {
         width: "auto"
+    },
+    link: {
+        color: 'black',
+        textDecoration: 'none',
     }
 });
 
-const DrawerLeft = ({ setPage }) => {
+const DrawerLeft = () => {
     const classes = useStyles();
     const [state, setState] = useState({
         top: false,
@@ -45,9 +49,11 @@ const DrawerLeft = ({ setPage }) => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {["Fai Web", "Pedco"].map((text, index) => (
-                    <ListItem button key={text} onClick={() => setPage(text)}>
-                        <ListItemText primary={text} />
+                {["faiweb", "pedco"].map((text, index) => (
+                    <ListItem key={text}>
+                        <a href={`#${text}`} className={classes.link}>
+                            <ListItemText primary={text.toUpperCase()} color='textPrimary' />
+                        </a>
                     </ListItem>
                 ))}
             </List>

@@ -1,13 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
     lista: {
-        minWidth: '10rem',
-        maxWidth: '20rem',
         backgroundColor: 'ligthgray',
-        paddingLeft: '0px',
-        paddingRight: '0px'
-
     },
     listItem: {
         minWidth: '100%',
@@ -19,9 +14,19 @@ export default makeStyles(() => ({
     },
     title: {
         fontWeight: 300,
-        fontStyle: 'oblique',
-        fontSize: '4vh'
-    }
+        fontSize: '1.5em'
+    },
+    big: {
+        fontWeight: 200,
+        fontSize: '3.5em',
+        position: 'relative',
+    },
+    gridContainer: {
+        flexGrow: 1,
+        paddingTop: '0.5rem',
+        borderRadius: '10px',
+        backgroundColor: 'white',
+    },
 
 }
 ))

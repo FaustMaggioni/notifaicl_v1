@@ -11,3 +11,14 @@ export const fetchNoticias = async () => {
     }
 }
 
+export const fetchTrabajos = async () => {
+    try {
+        const url = `${baseURL}/fai/trabajos`
+        const response = await fetch(url)
+        let data = response.json()
+        return data
+    } catch (error) {
+        console.log(error.json())
+    }
+}
+
