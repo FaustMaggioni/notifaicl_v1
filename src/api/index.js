@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:5000'
+const baseURL = 'https://notifai-server.vercel.app/'
 
 export const fetchNoticias = async () => {
     try {
