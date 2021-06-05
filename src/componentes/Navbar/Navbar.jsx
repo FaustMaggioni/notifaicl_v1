@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useStyles from './styles'
 import logosintxt from '../../imagenes/logosintxt.svg'
 import DrawerLeft from '../Drawer/Drawer.jsx'
@@ -12,7 +12,7 @@ const Navbar = () => {
             <Toolbar className={classes.toolbar}>
                 <DrawerLeft></DrawerLeft>
                 <Typography align="center" m={1} className={classes.title} variant="h1" > NOTIFAI </Typography>
-                <img className={classes.logoNav} src={logosintxt} />
+                <img className={classes.logoNav} src={logosintxt} alt='' />
             </Toolbar>
         </AppBar>
     )

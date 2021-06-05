@@ -4,9 +4,9 @@ import { Grid, List, ListItem, Typography, Button, Card, CardActions, CardConten
 const Lista = ({ classes, noticias, nombre }) => {
     return (
         <Grid item xs={9}
-            sm={3}
-            md={3}
-            lg={3}
+            sm={7}
+            md={5}
+            lg={5}
             className={classes.noticias} >
             <List className={classes.lista} component="nav" aria-label="secondary mailbox folders">
                 <ListItem>
@@ -14,7 +14,7 @@ const Lista = ({ classes, noticias, nombre }) => {
                         <Typography align='center' className={classes.title} variant='h6'> {nombre} </Typography>
                     </ListItemText>
                 </ListItem>
-                {noticias ? (<Listado noticias={noticias} classes={classes} />) : (<Typography> Nada nuevo en la faiweb </Typography>)}
+                {noticias ? (<Listado noticias={noticias} classes={classes} />) : (<Typography> Nada nuevo en {nombre} </Typography>)}
             </List>
         </Grid>
     )
@@ -38,7 +38,7 @@ const Listado = ({ noticias, classes }) => {
                             </CardContent>
                             <CardActions className={classes.actions} style={{ backgroundColor: fondo }}>
                                 <Button>
-                                    <a href={noticia.link} target='_blank'> Ver en faiweb </a>
+                                    <a href={noticia.link} target='_blank'> Más info en faiweb </a>
                                 </Button>
                             </CardActions>
                         </Card>

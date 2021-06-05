@@ -9,10 +9,23 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <title>React App</title>
+    <title>Notifai</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', async () => {
+          try {
+            const reg = await navigator.serviceWorker.register('./serviceworker.js')
+            console.log(reg.scope, 'success')
+          } catch (error) {
+            console.log('Erorr', error)
+          }
+        })
+      }
+
+    </script>
   </body>
 </html>

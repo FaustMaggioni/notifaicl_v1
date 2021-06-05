@@ -20,13 +20,13 @@ export default makeStyles({
         fontStyle: "oblique",
         padding: '0em',
         margin: '0em',
-        fontSize: '4em',
+        fontSize: '3em',
         textAlign: 'justify',
 
     },
     logoNav: {
         maxHeight: '1.5em',
-        fontSize: '3vw'
+        fontSize: '2em'
     },
 
 
