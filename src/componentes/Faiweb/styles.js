@@ -24,6 +24,7 @@ export default makeStyles((theme) => ({
     gridContainer: {
         flexGrow: 1,
         paddingTop: '0.5rem',
+        marginTop: '2rem',
         borderRadius: '10px',
         backgroundColor: 'white',
     },

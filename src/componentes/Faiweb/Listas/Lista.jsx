@@ -14,7 +14,7 @@ const Lista = ({ classes, noticias, nombre }) => {
                         <Typography align='center' className={classes.title} variant='h6'> {nombre} </Typography>
                     </ListItemText>
                 </ListItem>
-                {noticias ? (<Listado noticias={noticias} classes={classes} />) : (<Typography> Nada nuevo en {nombre} </Typography>)}
+                {noticias ? (<Listado noticias={noticias} classes={classes} />) : (<Typography align='center'> Nada nuevo en {nombre} </Typography>)}
             </List>
         </Grid>
     )

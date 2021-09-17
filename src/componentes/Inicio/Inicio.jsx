@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import useStyles from './styles.js'
 import Faiweb from '../Faiweb/Faiweb'
 import Pedco from '../Pedco/Pedco'
+import './inicio.css'
 
 const Inicio = () => {
     const classes = useStyles()
@@ -13,7 +14,7 @@ const Inicio = () => {
             <CssBaseline />
             <Container className={classes.mainContainer} >
                 <Navbar />
-                <div className={classes.root}>
+                <div className='flex'>
                     <div id='faiweb'>
                         <Faiweb />
                     </div>
